@@ -8,7 +8,7 @@ function TodoContainer() {
   const dispatch = useDispatch();
 
   const addTodo = (newTodo) => {
-    dispatch({ type: "ADD_TODO", todo: newTodo });
+    dispatch({ type: "ADD_TODO", payload: newTodo });
   }
 
   const deleteTodo = (id) => {

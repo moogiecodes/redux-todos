@@ -6,9 +6,9 @@ const INITIAL_STATE = {
 function rootReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case "ADD_TODO":
-      return { ...state, todos: [...state.todos, action.todo] };
+      return { ...state, todos: [...state.todos, action.payload] };
     case "DELETE_TODO":
-      return { ...state, todos: state.todos.filter(t => t.id !== action.id) };
+      return { ...state, todos: state.todos.filter(t => t.id !== action.payloadid) };
     default:
       return state;
   }
